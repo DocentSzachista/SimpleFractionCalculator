@@ -30,7 +30,14 @@ public abstract class GetFractionFromString
     }
     private static boolean isNegative(String numeratorStr, String denominatorStr)
     {
-        return true;
+        if(numeratorStr.contains("-") && denominatorStr.contains("-") || numeratorStr.indexOf("-")==-1 && denominatorStr.indexOf("-")==-1)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
     }
 
 
