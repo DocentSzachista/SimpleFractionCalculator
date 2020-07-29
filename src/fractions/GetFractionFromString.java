@@ -24,8 +24,31 @@ public abstract class GetFractionFromString
     }
     private  static Fractions convert(String numeratorStr, String denominatorStr)
     {
-        int numerator = Integer.parseInt(numeratorStr);
-        int denumerator=Integer.parseInt(denominatorStr);
+        int numerator, denumerator;
+        boolean negative= isNegative(numeratorStr, denominatorStr);
+        if(negative)
+        {
+            if(numeratorStr.contains("-"))
+            {
+                numeratorStr= numeratorStr.substring(1);
+            }
+            else
+            {
+                denominatorStr=denominatorStr.substring(1);
+            }
+             numerator = Integer.parseInt(numeratorStr)*(-1);
+            denumerator=Integer.parseInt(denominatorStr);
+        }
+        else
+        {
+            if(numeratorStr.contains("-") && denominatorStr.contains("-"))
+            {
+                numeratorStr = numeratorStr.substring(1);
+                denominatorStr = denominatorStr.substring(1);
+            }
+             numerator = Integer.parseInt(numeratorStr);
+             denumerator = Integer.parseInt(denominatorStr);
+        }
         return new Fractions(numerator, denumerator);
     }
     private static boolean isNegative(String numeratorStr, String denominatorStr)

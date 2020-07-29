@@ -10,7 +10,7 @@ public class MainApp {
         print();
         int wybor= input.nextInt();
         //equations=new FracOperations( inputNumbers(input), inputNumbers(input) );
-        equations=new FracOperations(GetFractionFromString.separate("1/2"), GetFractionFromString.separate("1/2"));
+        equations=new FracOperations(GetFractionFromString.separate("-1/-2"), GetFractionFromString.separate("1/2"));
         switch (wybor)
         {
             case 1:
