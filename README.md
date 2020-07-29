@@ -2,4 +2,4 @@
 Counts fractions.
 |check | Task   |
 |------|-----------|
-|  :heavy_check_mark:   | All the operations added|
+|  :heavy_check_mark:   | All the maths added|
